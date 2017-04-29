@@ -18,6 +18,8 @@
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+.idea/
+*.iml
 
 # Gradle:
 .idea/**/gradle.xml
@@ -109,3 +111,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/java,windows,intellij
+# some editting
+# eny words
