@@ -5,12 +5,9 @@ import com.kitcenter.app.utils.convertors.PrimitiveConvertor;
 public class Lesson3Runner {
     public static void main(String[] args) {
 
-        /*PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
+        PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
         primitiveConvertor.floatToChar(122f);
         primitiveConvertor.intToChar(99);
-        primitiveConvertor.charToInt('A');*/
-        float float1 = 3.1456f;
-        int int1 = (short) float1;
-
+        primitiveConvertor.charToInt('A');
     }
 }
