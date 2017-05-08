@@ -13,13 +13,16 @@ public class CircleArea {
     }
 
     public static void calculateBigger() {
-        int area1 = 1;
-        int area2 = 2;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input area1: ");
+        double area1 = sc.nextDouble();
+        System.out.print("Input area2: ");
+        double area2 = sc.nextDouble();
 
         if (area1 > area2) {
-            System.out.println("Area1 is bigger");
+            System.out.println("Area1 is a bigger");
         } else {
-            System.out.println("Area2 is bigger");
+            System.out.println("Area2 is a bigger");
         }
     }
 

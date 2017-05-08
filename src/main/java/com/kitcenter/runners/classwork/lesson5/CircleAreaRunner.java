@@ -6,6 +6,8 @@ public class CircleAreaRunner {
     public static void main(String[] args) {
         CircleArea ca = new CircleArea();
         ca.calculate();
+        ca.calculateBigger();
+
 
     }
 }
