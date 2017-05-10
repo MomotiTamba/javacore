@@ -2,7 +2,9 @@ package com.kitcenter.app.classwork.lesson5;
 
 
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CalculatorTest {
 
     int numberOne, numberTwo, power, percentage;
@@ -25,7 +27,7 @@ public class CalculatorTest {
         power = 2;
         percentage = 22;
     }
-
+    @Ignore
     @Test
     public void sumTest1() {
         int expectedResult = 22;
