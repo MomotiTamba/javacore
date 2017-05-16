@@ -8,6 +8,6 @@ public class Lesson3Runner {
         PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
         primitiveConvertor.floatToChar(122f);
         primitiveConvertor.intToChar(99);
-        primitiveConvertor.charToInt('A');
+        primitiveConvertor.doubleToChar(23.4);
     }
 }

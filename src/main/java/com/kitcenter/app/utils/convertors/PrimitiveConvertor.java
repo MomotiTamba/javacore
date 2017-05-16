@@ -11,13 +11,13 @@ public class PrimitiveConvertor {
 
     public char intToChar(int intValue) {
         char charValue = (char) intValue;
-        System.out.println("Input float value is " + intValue + ". Output char value is " + charValue);
+        System.out.println("Input int value is " + intValue + ". Output char value is " + charValue);
         return charValue;
     }
 
-    public int charToInt(char charValue) {
-        int intValue = (int) charValue;
-        System.out.println("Input float value is " + charValue + ". Output char value is " + intValue);
+    public char doubleToChar(double doubleValue) {
+        char charValue = (char) doubleValue;
+        System.out.println("Input string value is " + doubleValue + ". Output char value is " + charValue);
         return charValue;
     }
 }

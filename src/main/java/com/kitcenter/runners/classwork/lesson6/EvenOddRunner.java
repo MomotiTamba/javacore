@@ -7,7 +7,7 @@ public class EvenOddRunner {
 
     public static void main(String[] args) {
         EvenOdd theEvenOdd = new EvenOdd();
-        theEvenOdd.checkEvenOdd();
+        theEvenOdd.checkEvenOdd(31);
     }
 
 }
