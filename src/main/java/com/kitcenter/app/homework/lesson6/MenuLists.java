@@ -7,7 +7,7 @@ import com.kitcenter.app.utils.convertors.PrimitiveConvertor;
 
 import java.util.Scanner;
 
-public class MenuClassLists {
+public class MenuLists {
 
     AskerMessengers askerMessengers = new AskerMessengers();
     Calculator calculator = new Calculator();

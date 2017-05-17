@@ -6,9 +6,9 @@ import org.junit.runners.MethodSorters;
 import java.util.Scanner;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class MenuClassListsTest {
+public class MenuListsTest {
     Scanner sc = new Scanner(System.in);
-    MenuClassLists menuClassLists = new MenuClassLists();
+    MenuLists menuLists = new MenuLists();
 
     @BeforeClass
     public static void preConditionForClass() {
@@ -22,7 +22,7 @@ public class MenuClassListsTest {
 
     @Test
     public void aLogicMainMenu() {
-        menuClassLists.logicMainMenu();
+        menuLists.logicMainMenu();
     }
 
     @After
