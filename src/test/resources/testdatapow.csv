@@ -1,0 +1,5 @@
+argumentA, argumentB, expectedResult
+123, 2, 15129
+3, 10, 59049
+-23, 6, 1.48035889E8
+33, -34, 0
