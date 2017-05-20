@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson6;
+package com.kitcenter.app.homework;
 
 
 public class AskerMessengers {

@@ -112,14 +112,14 @@ public class Calculator {
     /*
     This method considers percentage, int value
      */
-    public int percentage(int numberOne, double percentage){
-        return (int) ((numberOne * percentage) / 100);
+    public int percentage(int numberOne, int percentage){
+        return (numberOne * percentage) / 100;
     }
 
     /*
     This method considers percentage, double value
      */
-    public double percentage(double numberOne, double percentage){
+    public double percentage(double numberOne, int percentage){
         return (numberOne * percentage) / 100;
     }
 

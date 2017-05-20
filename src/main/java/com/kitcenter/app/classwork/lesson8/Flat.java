@@ -1,4 +1,4 @@
-package com.kitcenter.app.classwork.lesson5;
+package com.kitcenter.app.classwork.lesson8;
 
 
 public class Flat {

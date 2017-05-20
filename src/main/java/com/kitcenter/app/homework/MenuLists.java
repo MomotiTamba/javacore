@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson6;
+package com.kitcenter.app.homework;
 
 import com.kitcenter.app.classwork.lesson5.Calculator;
 import com.kitcenter.app.classwork.lesson5.CircleArea;

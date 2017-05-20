@@ -2,7 +2,7 @@ package com.kitcenter.runners.classwork.lesson8;
 
 
 import com.kitcenter.app.classwork.lesson5.Car;
-import com.kitcenter.app.classwork.lesson5.Flat;
+import com.kitcenter.app.classwork.lesson8.Flat;
 import com.kitcenter.app.classwork.lesson8.ArrayUtil;
 
 import java.util.Arrays;
