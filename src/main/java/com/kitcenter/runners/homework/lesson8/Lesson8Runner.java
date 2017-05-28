@@ -9,7 +9,7 @@ public class Lesson8Runner {
         Array8Tasks array8Tasks = new Array8Tasks();
         array8Tasks.aTaskEvenElementsInArray();
         array8Tasks.bTaskOddElementsInArray();
-        array8Tasks.cTaskRandomElemetnsInArray();
+        array8Tasks.cTaskRandomElementsInArray();
         array8Tasks.dTaskMinMaxElementsInArray();
         array8Tasks.eTaskTwoDimensionalArray();
         array8Tasks.fTaskTwoDimensionalSortArray();

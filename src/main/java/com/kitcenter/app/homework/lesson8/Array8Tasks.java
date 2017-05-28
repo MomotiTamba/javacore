@@ -45,24 +45,26 @@ public class Array8Tasks {
         System.out.println("\nEnd\n");
     }
 
-    public void cTaskRandomElemetnsInArray() {
-        int count = 0;
+    public void cTaskRandomElementsInArray() {
+        int countEven = 0;
+        int j = 0;
         int[] randArray = new int[15];
-        int[] evenArray = new int[15];
 
         System.out.print("Start\n - Task c:\nRandom Array(0;9): [");
         for (int i = 0; i < randArray.length; i++) {
-            randArray[i] = (int) (Math.random() * 10);
+            randArray[i] = (int) (Math.random() * 100);
             System.out.print(randArray[i] + " ");
             if (randArray[i] % 2 == 0 && randArray[i] != 0) {
-                count += 1;
-                evenArray[i] = randArray[i];
+                countEven += 1;
             }
         }
-        System.out.print("\b]\nCount even: " + count + "\nEven Array: [");
-        for (int j = 0; j < randArray.length; j++) {
-            if (randArray[j] != 0) {
+        System.out.print("\b]\nEven count: " + countEven + "\nEven array: [");
+        int[] evenArray = new int[countEven];
+        for (int i = 0; i < randArray.length; i++) {
+            if (randArray[i] % 2 == 0 && randArray[i] != 0) {
+                evenArray[j] = randArray[i];
                 System.out.print(evenArray[j] + " ");
+                j++;
             }
         }
         System.out.print("\b]\nEnd\n");
@@ -89,15 +91,16 @@ public class Array8Tasks {
         }
         System.out.println("Max element in array: " + max);
         System.out.println("Min element in array: " + min);
+        System.out.println("\nEnd\n");
     }
 
     public void eTaskTwoDimensionalArray() {
-        System.out.println("\nRandom array (0;99):\n");
+        System.out.println("Start\n - Task c:\nRandom array (0;99):\n");
         int[][] twoDimArray = new int[5][8];
         Random rnd = new Random();
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray[i].length; j++) {
-                twoDimArray[i][j] = rnd.nextInt( 89) + 10;
+                twoDimArray[i][j] = rnd.nextInt(89) + 10;
             }
         }
 
@@ -106,10 +109,11 @@ public class Array8Tasks {
                 System.out.print(twoDimArray[i][j] + " ");
             }
         }
+        System.out.println("\nEnd\n");
     }
 
     public void fTaskTwoDimensionalSortArray() {
-        System.out.println("\nRandom Permutation List Generator\n");
+        System.out.println("Start\n - Task f:\nRandom Permutation List Generator\n");
         int[][] twoDimArray = new int[5][8];
         Random rnd = new Random();
         for (int i = 0; i < twoDimArray.length; i++) {
@@ -124,18 +128,39 @@ public class Array8Tasks {
                 System.out.print(twoDimArray[i][j] + "\t");
             }
         }
+        System.out.println("\nEnd\n");
     }
 
-    public void gTaskInputDigits(){
-        String exit = "exit";
+    public void gTaskInputDigits() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Input digits. If you want to quit, type \"exit\"");
-        int digits = 0;
-        while(sc.hasNextInt()){
-            System.out.println("Input again:");
-            int typeDigits = sc.nextInt();
-            digits+=typeDigits;
+        int sum = 0;
+        try {
+            System.out.println("Start\n - Task g:\nType \"1\" - and input numbers through \"Enter\",\nType \"exit\" - if you want to stop program");
+            while (sc.hasNext()) {
+                String s = sc.next();
+                switch (s) {
+                    case "1":
+                        while (sc.hasNextInt()) {
+                            System.out.print("Input numbers else or \"exit\": ");
+                            sum += sc.nextInt();
+                        }
+                        System.out.println(sum);
+                        break;
+                    case "exit":
+                        System.out.println("Program stop!");
+                        sc.close();
+                        return;
+                    default:
+                        System.out.println("You typing something wrong, try again(type 1 or exit):");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("error " + e.getMessage());
+        } finally {
+            if (sc != null) {
+                sc.close();
+            }
         }
-        System.out.println(digits);
+        System.out.println("\nEnd\n");
     }
 }
