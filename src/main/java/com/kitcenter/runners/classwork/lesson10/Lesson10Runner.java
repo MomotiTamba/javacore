@@ -6,12 +6,12 @@ import com.kitcenter.app.classwork.lesson10.StringToDisplay;
 
 public class Lesson10Runner {
     public static void main(String[] args) {
-        /*StringToDisplay stringToDisplay = new StringToDisplay();
+        StringToDisplay stringToDisplay = new StringToDisplay();
         stringToDisplay.setCharToString();
         stringToDisplay.setCharToString(new char[]{'p', 'r', 'i', 'v', 'e', 't'});
         stringToDisplay.setAutoCharToString();
 
-        String toFloat = "0.44";
+        /*String toFloat = "0.44";
         float fir = Float.valueOf(toFloat);
         float fir1 = Float.parseFloat(toFloat);
         System.out.println(fir);

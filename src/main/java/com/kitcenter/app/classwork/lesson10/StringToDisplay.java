@@ -32,9 +32,10 @@ public class StringToDisplay {
         String stringToDisplay = "";
         char[] charArrayToString = {'a', 'b', 'c', 'd'};
         stringToDisplay = Arrays.toString(charArrayToString);
+        stringToDisplay.replace(",","");
         stringToDisplay.replace("[", "");
-        stringToDisplay.replace(",", "");
         stringToDisplay.replace("]", "");
+        stringToDisplay.replace(" ", "");
         stringToDisplay.trim();
         System.out.println(stringToDisplay);
     }
