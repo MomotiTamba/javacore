@@ -29,7 +29,7 @@ public class AskerMessengers {
         askerConvectPrimitivesSubMenu();
     }
 
-    public void askerConvectPrimitivesSubMenu(){
+    public void askerConvectPrimitivesSubMenu() {
         StringBuilder sb = new StringBuilder();
         sb.append("I can convect:\n");
         sb.append("1. float to char\n");
@@ -47,7 +47,7 @@ public class AskerMessengers {
         askerEvenOddSubMenu();
     }
 
-    public void askerEvenOddSubMenu(){
+    public void askerEvenOddSubMenu() {
         StringBuilder sb = new StringBuilder();
         sb.append("1. Even or odd\n");
         sb.append("\n0. Back to main menu\n");
@@ -88,12 +88,13 @@ public class AskerMessengers {
         System.out.print(sb);
     }
 
-    public void askerWrongType(){
+    public void askerWrongType() {
         StringBuilder sb = new StringBuilder();
         sb.append("You type a wrong value\n");
         sb.append("Try again\n");
         System.out.print(sb);
     }
+
     public void askerWrongTypeMainMenu() {
         askerWrongType();
         askerMainMenu();
@@ -109,12 +110,12 @@ public class AskerMessengers {
         askerConvectPrimitivesSubMenu();
     }
 
-    public void askerWrongTypeEvenOddMenu(){
+    public void askerWrongTypeEvenOddMenu() {
         askerWrongType();
         askerEvenOddMenu();
     }
 
-    public void askerWrongTypeCircleAreaMenu(){
+    public void askerWrongTypeCircleAreaMenu() {
         askerWrongType();
         askerCircleAreaSubMenu();
     }

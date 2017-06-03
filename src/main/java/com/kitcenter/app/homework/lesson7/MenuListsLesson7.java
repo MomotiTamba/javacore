@@ -7,7 +7,7 @@ import com.kitcenter.app.utils.convertors.PrimitiveConvertor;
 
 import java.util.Scanner;
 
-public class MenuLists {
+public class MenuListsLesson7 {
 
     AskerMessengers askerMessengers = new AskerMessengers();
     Calculator calculator = new Calculator();
@@ -16,7 +16,7 @@ public class MenuLists {
     EvenOdd evenOdd = new EvenOdd();
     Scanner sc = new Scanner(System.in);
 
-    public void logicMainMenu() {
+    public void logicMainMenuLesson7() {
 
         askerMessengers.askerWelcome();
         while (sc.hasNextInt()) {
@@ -82,11 +82,11 @@ public class MenuLists {
         }
     }
 
-    public void logicSubMenuEvenOdd(){
+    public void logicSubMenuEvenOdd() {
 
-        while (sc.hasNextInt()){
+        while (sc.hasNextInt()) {
             int evenOddTrigger = sc.nextInt();
-            switch (evenOddTrigger){
+            switch (evenOddTrigger) {
                 case 1:
                     System.out.println("Guess even or odd, input one int value and press \"Enter\" button: ");
                     evenOdd.checkEvenOdd(sc.nextInt());
@@ -151,7 +151,7 @@ public class MenuLists {
                 case 1:
                     System.out.println("Input one double values: ");
                     double resCircleArea = circleArea.calculateCircleArea(sc.nextDouble());
-                    System.out.println("Area result is: " +resCircleArea);
+                    System.out.println("Area result is: " + resCircleArea);
                     askerMessengers.askerCircleAreaSubMenu();
                     break;
                 case 2:
