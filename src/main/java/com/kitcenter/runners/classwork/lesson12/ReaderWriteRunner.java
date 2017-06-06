@@ -1,4 +1,4 @@
-package com.kitcenter.runners.lesson12;
+package com.kitcenter.runners.classwork.lesson12;
 
 
 import com.kitcenter.app.classwork.lesson10.Palindrome;

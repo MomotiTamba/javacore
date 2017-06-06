@@ -15,12 +15,13 @@ public class TaskMessage {
     public void mainMenuMessage() {
         StringBuilder sb = new StringBuilder();
         sb.append("Please choose one way to check palindrome:\n");
-        sb.append("1. \n");
-        sb.append("2. Guess even or odd\n");
-        sb.append("3. Calculator\n");
-        sb.append("4. Calculate the circle area\n");
+        sb.append("1. 1st method\n");
+        sb.append("2. 2nd method\n");
+        sb.append("3. 3rd method\n");
+        sb.append("4. 4th method\n");
+        sb.append("5. 5th method\n");
         sb.append("\n0. Stop the program\n");
-        sb.append("\nInput your point: ");
+        sb.append("\nInput your choice: ");
         System.out.print(sb);
     }
 }

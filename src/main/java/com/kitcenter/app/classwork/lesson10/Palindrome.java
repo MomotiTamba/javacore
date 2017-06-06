@@ -4,10 +4,7 @@ package com.kitcenter.app.classwork.lesson10;
 public class Palindrome {
 
     public boolean isStringExist(String stringValue) {
-        if (stringValue == null) {
-            return false;
-        }
-        if (stringValue == " ") {
+        if (stringValue == null || stringValue == "") {
             return false;
         }
         return true;
@@ -18,7 +15,7 @@ public class Palindrome {
         String stringValueReplaceAllSign = stringValue.toLowerCase().replaceAll("\\W", "");
         int len = stringValueReplaceAllSign.length();
         for (int i = 0; i < len / 2; i++) {
-            if (stringValueReplaceAllSign.charAt(i) !=stringValueReplaceAllSign.charAt(len - i - 1)) {
+            if (stringValueReplaceAllSign.charAt(i) != stringValueReplaceAllSign.charAt(len - i - 1)) {
                 return false;
             }
         }
@@ -27,7 +24,7 @@ public class Palindrome {
 
     public boolean isPalindromeBuilder1(String stringValue) {
         isStringExist(stringValue);
-        StringBuilder sb = new StringBuilder(stringValue.toLowerCase());
+        StringBuilder sb = new StringBuilder(stringValue.toLowerCase().trim());
         sb.reverse();
         return sb.toString().equals(stringValue.toLowerCase());
     }
