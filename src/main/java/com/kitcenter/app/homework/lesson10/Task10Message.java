@@ -1,7 +1,7 @@
 package com.kitcenter.app.homework.lesson10;
 
 
-public class TaskMessage {
+public class Task10Message {
 
     public void welcomeMessage() {
         StringBuilder sb = new StringBuilder();

@@ -10,33 +10,33 @@ public class MenuListLesson10 {
     private boolean key = true;
     Palindrome palindrome = new Palindrome();
     Scanner sc = new Scanner(System.in);
-    TaskMessage taskMessage = new TaskMessage();
+    Task10Message task10Message = new Task10Message();
 
     public void mainMenuLesson10() {
-        taskMessage.welcomeMessage();
+        task10Message.welcomeMessage();
         while (sc.hasNextInt()) {
             int select = sc.nextInt();
             switch (select) {
                 case 1:
                     subMenu1Lesson10();
-                    taskMessage.mainMenuMessage();
+                    task10Message.mainMenuMessage();
                     break;
                 case 2:
                     subMenu2Lesson10();
-                    taskMessage.mainMenuMessage();
+                    task10Message.mainMenuMessage();
                     break;
                 case 3:
                     subMenu3Lesson10();
                     palindrome.isPalindromeBuilder2(sc.nextLine());
-                    taskMessage.mainMenuMessage();
+                    task10Message.mainMenuMessage();
                     break;
                 case 4:
                     subMenu4Lesson10();
-                    taskMessage.mainMenuMessage();
+                    task10Message.mainMenuMessage();
                     break;
                 case 5:
                     subMenu5Lesson10();
-                    taskMessage.mainMenuMessage();
+                    task10Message.mainMenuMessage();
                     break;
                 case 0:
                     System.out.println("Quit\nCall me later");
