@@ -91,12 +91,13 @@ public class MenuListLesson11 {
 
     private void subMenuFirstList3Lesson11() {
         while (key) {
+            Scanner sc1 = new Scanner(System.in);
             System.out.println("1. Begin to input string\n0. back to main");
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
                     System.out.print("Input your line and then enter the keyword:");
-                    arrayParser.userKeywordLine(sc.nextLine(), sc.nextLine());
+                    arrayParser.userKeywordLine(sc1.nextLine(), sc1.nextLine());
                     break;
                 case 0:
                     return;
