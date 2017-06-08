@@ -11,17 +11,21 @@ public class MenuListLesson11 {
     Task11Message task11Message = new Task11Message();
 
     public void mainMenuListLesson11() {
+        task11Message.welcomeMessageTask11();
         while (key) {
-            task11Message.welcomeMessageTask11();
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    subMenuListLesson11();
+                    subMenuFirstList1Lesson11();
                     task11Message.mainMenuMessageTask11();
                     break;
                 case 2:
+                    subMenuFirstList2Lesson11();
+                    task11Message.mainMenuMessageTask11();
                     break;
                 case 3:
+                    subMenuFirstList3Lesson11();
+                    task11Message.mainMenuMessageTask11();
                     break;
                 case 0:
                     return;
@@ -31,15 +35,15 @@ public class MenuListLesson11 {
         }
     }
 
-    private void subMenuListLesson11() {
+    private void subMenuFirstList1Lesson11() {
         while (key) {
-            System.out.println("1. Begin to input string through \";\"\n0. back to main");
+            System.out.println("1. Begin to input string\n0. back to main");
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.print("Input your string:");
+                    System.out.print("Input integers through a semicolon(\";\"):");
                     int[] intArray = arrayParser.stringToInt(sc.next());
-                    subOneMenuListLesson11(intArray);
+                    subMenuSecondList1Lesson11(intArray);
                     break;
                 case 0:
                     return;
@@ -49,9 +53,9 @@ public class MenuListLesson11 {
         }
     }
 
-    private void subOneMenuListLesson11(int[] intArray) {
+    private void subMenuSecondList1Lesson11(int[] intArray) {
         while (key) {
-            System.out.println("1. Sort your massive ascending\n2. Sort your massive descending\n0. back to main");
+            System.out.println("1. Sort your line ascending\n2. Sort your line descending\n0. back to main");
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
@@ -60,6 +64,40 @@ public class MenuListLesson11 {
                 case 2:
                     arrayParser.sortArrayDescending(intArray);
                     return;
+                case 0:
+                    return;
+                default:
+                    System.out.println("Wrong choice, try again:");
+            }
+        }
+    }
+
+    private void subMenuFirstList2Lesson11() {
+        while (key) {
+            System.out.println("1. Begin to input string\n0. back to main");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Input your separator and then input your line via this separator(Exceptions: *, ^, $, ?, [, ], |):");
+                    arrayParser.userSeparatorArray(sc.next(), sc.next());
+                    break;
+                case 0:
+                    return;
+                default:
+                    System.out.println("Wrong choice, try again:");
+            }
+        }
+    }
+
+    private void subMenuFirstList3Lesson11() {
+        while (key) {
+            System.out.println("1. Begin to input string\n0. back to main");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Input your line and then enter the keyword:");
+                    arrayParser.userKeywordLine(sc.nextLine(), sc.nextLine());
+                    break;
                 case 0:
                     return;
                 default:

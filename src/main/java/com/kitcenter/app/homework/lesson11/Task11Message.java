@@ -14,8 +14,8 @@ public class Task11Message {
     public void mainMenuMessageTask11() {
         StringBuilder sb = new StringBuilder();
         sb.append("Please choose one way to check it:\n");
-        sb.append("1. Converts a string to an array\n");
-        sb.append("2. 2nd method\n");
+        sb.append("1. Converts a string to an array and then sort\n");
+        sb.append("2. Input own separator and enter line via this separator\n");
         sb.append("3. 3rd method\n");
         sb.append("4. 4th method\n");
         sb.append("5. 5th method\n");
