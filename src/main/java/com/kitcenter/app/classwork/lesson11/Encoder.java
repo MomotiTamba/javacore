@@ -16,6 +16,7 @@ public class Encoder {
                 }
             }
         }
+        System.out.println(sb);
         return sb.toString();
     }
 }

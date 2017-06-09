@@ -17,8 +17,7 @@ public class Task11Message {
         sb.append("1. Converts a string to an array and then sort\n");
         sb.append("2. Input own separator and enter line via this separator\n");
         sb.append("3. Input string line and a keyword\n");
-        sb.append("4. 4th method\n");
-        sb.append("5. 5th method\n");
+        sb.append("4. Encryption algorithm Enigma\n");;
         sb.append("\n0. Stop the program\n");
         sb.append("\nInput your choice: ");
         System.out.print(sb);
