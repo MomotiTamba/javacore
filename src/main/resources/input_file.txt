@@ -1,3 +1,2 @@
-some text
-and that too some text
-the same shit
+14;13;0;-12
+12;11
