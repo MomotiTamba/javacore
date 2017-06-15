@@ -1,9 +1,9 @@
-package com.kitcenter.app.homework.lesson13;
+package com.kitcenter.app.homework.lesson13_14;
 
 
 import java.util.Scanner;
 
-public class MenuListLesson13 {
+public class MenuListLesson13_14 {
 
     WhiteCollar whiteCollar = new WhiteCollar();
     Task13Message task13Message = new Task13Message();
@@ -38,7 +38,12 @@ public class MenuListLesson13 {
     private void subMenuFirstList1Lesson11() {
         while (true) {
             System.out.println("1. Begin to input string\n0. back to main");
-            int choice = creationScanner().nextInt();
+            int choice = 0;
+            try {
+                choice = creationScanner().nextInt();
+            } catch (Exception e) {
+                System.out.println("Wrong input, please type integers 1 or 0");
+            }
             switch (choice) {
                 case 1:
                     whiteCollar.setCompanyName(creationScanner().nextLine());
@@ -54,11 +59,20 @@ public class MenuListLesson13 {
     private void subMenuFirstList2Lesson11() {
         while (true) {
             System.out.println("1. Begin to input string\n0. back to main");
-            int choice = creationScanner().nextInt();
+            int choice = 0;
+            try {
+                choice = creationScanner().nextInt();
+            } catch (Exception e) {
+                System.out.println("Wrong input, please type integers 1 or 0");
+            }
             switch (choice) {
                 case 1:
-                    System.out.println("Input name, age and company name through \"Enter\": ");
-                    new WhiteCollar(creationScanner().nextLine(), creationScanner().nextInt(), creationScanner().nextLine());
+                    System.out.println("Input \'name\', \'age\' and \'company name\' through \"Enter\": ");
+                    try {
+                        new WhiteCollar(creationScanner().nextLine(), creationScanner().nextInt(), creationScanner().nextLine());
+                    } catch (Exception e) {
+                        System.out.println("You type wrong format, please type first name - strings, second - integers and third - strings");
+                    }
                     break;
                 case 0:
                     return;
