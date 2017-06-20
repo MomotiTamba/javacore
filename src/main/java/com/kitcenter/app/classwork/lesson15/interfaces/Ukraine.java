@@ -1,7 +1,7 @@
 package com.kitcenter.app.classwork.lesson15.interfaces;
 
 
-public class Ukraine implements Bicycle {
+public class Ukraine implements Bicycle, Repair {
 
     @Override
     public void changeGear(int value) {
@@ -10,6 +10,5 @@ public class Ukraine implements Bicycle {
 
     @Override
     public void shift() {
-
     }
 }

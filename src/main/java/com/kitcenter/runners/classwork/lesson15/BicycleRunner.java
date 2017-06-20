@@ -1,9 +1,6 @@
 package com.kitcenter.runners.classwork.lesson15;
 
-import com.kitcenter.app.classwork.lesson15.interfaces.ACME;
-import com.kitcenter.app.classwork.lesson15.interfaces.BMX;
-import com.kitcenter.app.classwork.lesson15.interfaces.Bicycle;
-import com.kitcenter.app.classwork.lesson15.interfaces.Ukraine;
+import com.kitcenter.app.classwork.lesson15.interfaces.*;
 
 
 public class BicycleRunner {
@@ -11,12 +8,15 @@ public class BicycleRunner {
         Bicycle bmx = new BMX();
         Bicycle acme = new ACME();
         Bicycle ukraine = new Ukraine();
-        bicycleActions(bmx, 20);
-        bicycleActions(acme, 40);
-        bicycleActions(ukraine, 60);
+        bicycleActions(bmx, 20, 5);
+        bicycleActions(acme, 40, 10);
+        bicycleActions(ukraine, 60, 15);
+
     }
-    public static void bicycleActions(Bicycle bicycle, int value){
+
+    public static void bicycleActions(Bicycle bicycle, int value, int speed) {
         bicycle.changeGear(value);
         bicycle.shift();
+        bicycle.changeSpeed(speed);
     }
 }

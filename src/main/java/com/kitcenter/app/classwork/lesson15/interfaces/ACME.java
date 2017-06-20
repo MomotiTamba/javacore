@@ -1,7 +1,7 @@
 package com.kitcenter.app.classwork.lesson15.interfaces;
 
 
-public class ACME implements Bicycle {
+public class ACME implements Bicycle, Repair {
 
     @Override
     public void changeGear(int value) {

@@ -2,7 +2,7 @@ package com.kitcenter.app.homework.lesson12;
 
 
 import java.io.*;
-import java.util.Arrays;
+import java.util.*;
 
 public class ReadWriteModify {
 
@@ -32,7 +32,8 @@ public class ReadWriteModify {
     }
 
     public String readLineInFile(String relativeToProject) throws IOException {
-        String line = "";
+        String lineStart = "";
+        String lineEnd = "";
         String absolutePathIn = createAbsolutePath(currentDir, relativeToProject);
         BufferedReader bufferedReader = null;
         try {
@@ -40,26 +41,60 @@ public class ReadWriteModify {
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
         }
-        /*line = bufferedReader.readLine();
-        sortStringArray(line);*/
         while (true) {
-            line = bufferedReader.readLine();
-            if (line == null) {
+            lineStart = bufferedReader.readLine();
+            if (lineStart == null) {
                 break;
             } else {
-                sortStringArray(line);
-                System.out.println(line);
-                //System.out.println("File copied!");
+                lineEnd += sortAndPaprseStringToIntArray(lineStart) + "\n";
+                System.out.println(lineEnd);
             }
         }
         bufferedReader.close();
-        return line;
+        return lineEnd;
     }
 
-    private String sortStringArray(String line){
-        String[] stringArrayLine = line.trim().split(";");
-        Arrays.sort(stringArrayLine);
-        return Arrays.toString(stringArrayLine).replace("[", "").replace(",", ";").replace("]", "");
+    private String sortAndPaprseStringToIntArray(String line) {
+        if (line.isEmpty() && line != null) {
+            System.out.println("Line is empty");
+            line = "0";
+        }
+        String[] stringArrayLine = line.replace(" ", "").split(",");
+        int[] intArrayLine = new int[stringArrayLine.length];
+        for (int i = 0; i < stringArrayLine.length; i++) {
+            intArrayLine[i] = Integer.valueOf(stringArrayLine[i]);
+        }
+        sortAscendingArray(intArrayLine);
+        //sortDescendingArray(intArrayLine);
+        return Arrays.toString(intArrayLine).replace("[", "").replace("]", "");
+    }
+
+    private int[] sortAscendingArray(int[] intArray) {
+        int temp;
+        for (int i = 0; i < intArray.length; i++) {
+            for (int j = i + 1; j < intArray.length; j++) {
+                if (intArray[j] < intArray[i]) {
+                    temp = intArray[i];
+                    intArray[i] = intArray[j];
+                    intArray[j] = temp;
+                }
+            }
+        }
+        return intArray;
+    }
+
+    private int[] sortDescendingArray(int[] intArray) {
+        int temp;
+        for (int i = 0; i < intArray.length; i++) {
+            for (int j = i + 1; j < intArray.length; j++) {
+                if (intArray[j] > intArray[i]) {
+                    temp = intArray[i];
+                    intArray[i] = intArray[j];
+                    intArray[j] = temp;
+                }
+            }
+        }
+        return intArray;
     }
 
     public void writeLineInFile(String relativeToProject) throws IOException {

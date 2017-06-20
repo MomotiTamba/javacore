@@ -8,7 +8,6 @@ import java.io.IOException;
 public class HomeTask12Runner {
     public static void main(String[] args) throws IOException {
         ReadWriteModify rwm = new ReadWriteModify();
-        //rwm.readWriteFile(rwm.getSourceFile());
         rwm.readLineInFile(rwm.getSourceFile());
         rwm.writeLineInFile(rwm.getTargetFile());
     }
