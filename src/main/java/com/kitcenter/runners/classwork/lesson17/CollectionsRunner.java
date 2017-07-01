@@ -8,13 +8,25 @@ public class CollectionsRunner {
         String abc = "abc";
         String abc2 = "abc2";
         ArrayList<String> myStringArrayList = new ArrayList<>();
-        myStringArrayList.add(0, abc);
-        myStringArrayList.add(1, abc2);
-        int size = myStringArrayList.size();
-        System.out.println(size);
-        System.out.println(myStringArrayList);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        myStringArrayList.add(abc);
+        System.out.println("Before remove: " + myStringArrayList.size());
+        myStringArrayList.remove(10);
+        System.out.println("After remove: " + myStringArrayList.size());
+        System.out.println(myStringArrayList.get(9));
+        System.out.println(myStringArrayList.size());
+                /*System.out.println(myStringArrayList);
         myStringArrayList.remove(1);
         myStringArrayList.clear();
-        System.out.println(myStringArrayList);
+        System.out.println(myStringArrayList);*/
     }
 }
