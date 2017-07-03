@@ -15,7 +15,7 @@ public class MenuListLesson17 {
         return scanner;
     }
 
-    public void menuListLesson17() {
+    public void menuListsLesson17() {
         task17Message.welcomeMessageTask17();
         while (true) {
             task17Message.mainMenuMessageTask17();
@@ -28,9 +28,11 @@ public class MenuListLesson17 {
             switch (choice) {
                 case 1:
                     menuRandomAgeQuestioner();
+                    countOfGuess = 0;
                     break;
                 case 2:
                     menuRandomLiveQuestioner();
+                    countOfGuess = 0;
                     break;
                 case 0:
                     return;
@@ -51,8 +53,9 @@ public class MenuListLesson17 {
                 System.out.println("Wrong value, please input only integers");
             }
             if (guessAge == randomListName.get(index).getAge()) {
-                System.out.println("Great, you're right!");
                 countOfGuess++;
+                System.out.println("Great, you're right! " + countOfGuess + " Guesses");
+                System.out.println("*For your information, true name: " + randomListName.get(index).getTrueName());
             } else {
                 System.out.println("Ouch, you a little wrong!");
             }
@@ -66,8 +69,10 @@ public class MenuListLesson17 {
             System.out.print("Name: " + randomListName.get(index).getFameName() + "\nIs a live?(yes/no): ");
             String guessLive = creationScanner().nextLine();
             if (guessLive.equalsIgnoreCase(randomListName.get(index).isLive())) {
-                System.out.println("Great, you're right!");
                 countOfGuess++;
+                System.out.println("Great, you're right! " + countOfGuess + " Guesses");
+                System.out.println("*For your information, true name: " + randomListName.get(index).getTrueName());
+
             } else {
                 System.out.println("Ouch, you a little wrong!");
             }
@@ -95,6 +100,11 @@ public class MenuListLesson17 {
             case 5:
                 System.out.println("Your guesses result is: " + countOfGuess + " - it's awesome result");
                 break;
+            case 6:
+                System.out.println("Your guesses result is: " + countOfGuess + " - it's the best result");
+                break;
+            default:
+                System.out.println("Something is going wrong");
         }
         return countOfGuess;
     }
