@@ -14,7 +14,7 @@ public class BoxPrinterGenericRunner {
         String string = boxPrinterGeneric1.getVal();
         System.out.println(string);
 
-        boolean test = BoxPrinterGeneric.<Integer>compare(boxPrinterGeneric, boxPrinterGeneric2);
+        boolean test = BoxPrinterGeneric.compare(boxPrinterGeneric, boxPrinterGeneric2);
         System.out.println(test);
     }
 }
