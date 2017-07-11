@@ -13,6 +13,7 @@ public class HomeTask16Runner {
         crawlerTractor.setPassenger(4);
         crawlerTractor.setWeight(2000);
         crawlerTractor.setWheel(0);
+
         System.out.println(wheeledTractor);
         System.out.println(crawlerTractor);
     }
