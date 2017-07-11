@@ -29,15 +29,14 @@ public class Array8Tasks {
         System.out.println("Start\n - Task b:");
         int[] nineNineArray = new int[100];
         for (int i = 0; i < nineNineArray.length; i++) {
-            if (i % 2 != 0 && i != 0) {
+            if (i % 2 != 0) {
                 nineNineArray[i] = i;
                 System.out.print(nineNineArray[i] + " ");
             }
         }
         System.out.println();
-
         for (int i = nineNineArray.length; i > 0; i--) {
-            if (i % 2 != 0 && i != 0) {
+            if (i % 2 != 0) {
                 nineNineArray[i] = i;
                 System.out.print(nineNineArray[i] + " ");
             }
@@ -49,7 +48,6 @@ public class Array8Tasks {
         int countEven = 0;
         int j = 0;
         int[] randArray = new int[15];
-
         System.out.print("Start\n - Task c:\nRandom Array(0;9): [");
         for (int i = 0; i < randArray.length; i++) {
             randArray[i] = (int) (Math.random() * 100);
@@ -72,7 +70,6 @@ public class Array8Tasks {
 
     public void dTaskMinMaxElementsInArray() {
         int[] randArray = new int[15];
-
         System.out.print("Start\n - Task d: \nRandom Array(0;999): [");
         for (int i = 0; i < randArray.length; i++) {
             randArray[i] = (int) (Math.random() * 1000);
