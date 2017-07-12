@@ -13,11 +13,18 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
         <junitparams.version>1.1.0</junitparams.version>
+        <selenide.version>4.5.1</selenide.version>
         <project.buid.sourceEncoding>UTF-8</project.buid.sourceEncoding>
     </properties>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenide.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
