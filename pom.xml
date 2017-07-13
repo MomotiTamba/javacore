@@ -14,6 +14,8 @@
         <junit.version>4.12</junit.version>
         <junitparams.version>1.1.0</junitparams.version>
         <selenide.version>4.5.1</selenide.version>
+        <testng.version>6.11</testng.version>
+        <webdrivermanager.version>1.7.1</webdrivermanager.version>
         <project.buid.sourceEncoding>UTF-8</project.buid.sourceEncoding>
     </properties>
 
@@ -23,7 +25,7 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
-            <scope>test</scope>
+
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -32,10 +34,21 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>pl.pragmatists</groupId>
             <artifactId>JUnitParams</artifactId>
             <version>${junitparams.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
         </dependency>
     </dependencies>
 
