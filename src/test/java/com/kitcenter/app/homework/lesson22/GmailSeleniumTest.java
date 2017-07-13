@@ -1,33 +1,34 @@
 package com.kitcenter.app.homework.lesson22;
 
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import org.junit.Assert;
-import org.junit.Test;
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
+import com.kitcenter.app.core.selenium.WebDriverTestBase;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class GmailSeleniumTest {
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+import static org.testng.Assert.assertTrue;
+
+public class GmailSeleniumTest extends WebDriverTestBase{
 
     private String gmailSearch = "https://www.gmail.com";
     private String logonName = "selenium.jtest@gmail.com";
     private String logonPassword = "ctcehbnb123";
-
-    private WebDriver webDriver;
     List<WebElement> elements;
 
     @Test
     public void gmailLogonTest() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\muon\\KIT\\chromedriver_win32\\chromedriver.exe");
-        webDriver = new ChromeDriver();
-        webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         webDriver.get(gmailSearch);
         // find login
         By loginLocator = By.cssSelector("div[class='Xb9hP'] input[id='identifierId']");
@@ -41,7 +42,7 @@ public class GmailSeleniumTest {
         By passwordLocator = By.cssSelector("#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input");
         elements = webDriver.findElements(passwordLocator);
         for (WebElement webElement : elements) {
-            Assert.assertTrue(webElement.isEnabled());
+            assertTrue(webElement.isEnabled());
             webElement.sendKeys(logonPassword);
             webElement.submit();
         }
@@ -54,8 +55,17 @@ public class GmailSeleniumTest {
         elements = webDriver.findElements(inboxLocator);
         for (WebElement webElement : elements) {
             webElement.click();
-            Assert.assertTrue(webElement.isDisplayed());
+            assertTrue(webElement.isDisplayed());
         }
-        webDriver.quit();
+    }
+
+    @Test
+    public void gmailLogonTest1(){
+        Configuration.browser = WebDriverRunner.CHROME;
+        open(gmailSearch);
+        $("div[class='Xb9hP'] input[id='identifierId']").val(logonName).pressEnter();
+        $("#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input").val(logonPassword).pressEnter();
+        $("div[class='aio UKr6le'] a[href='https://mail.google.com/mail/#inbox']").shouldBe(visible).shouldHave(
+                text("Inbox"));
     }
 }
