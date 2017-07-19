@@ -1,4 +1,4 @@
-package com.kitcenter.app.core.selenium;
+package com.kitcenter.app.selenium.core;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 

@@ -4,6 +4,7 @@ package com.kitcenter.runners.classwork.lesson19;
 import com.kitcenter.app.classwork.lesson19.OrderPair;
 import com.kitcenter.app.classwork.lesson19.OrderUtil;
 
+
 public class OrderPairRunner {
     public static void main(String[] args) {
 
@@ -12,5 +13,9 @@ public class OrderPairRunner {
 
         boolean same = OrderUtil.compare(p1, p2);
         System.out.println(same);
+
+        /*Map<String, Class<? extends Serializable>> expected = null;
+        Map<String, Class<java.util.Date>> result = null;*/
+
     }
 }

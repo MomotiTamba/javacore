@@ -1,7 +1,9 @@
 package com.kitcenter.app.classwork.lesson19;
 
 
-public class OrderPair<K, V> {
+import com.kitcenter.runners.classwork.lesson19.Pair;
+
+public class OrderPair<K, V> implements Pair {
 
     private K key;
     private V value;

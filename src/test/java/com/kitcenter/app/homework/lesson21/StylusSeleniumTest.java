@@ -2,9 +2,8 @@ package com.kitcenter.app.homework.lesson21;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
-import com.kitcenter.app.core.selenium.WebDriverTestBase;
+import com.kitcenter.app.selenium.core.WebDriverTestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import java.util.List;

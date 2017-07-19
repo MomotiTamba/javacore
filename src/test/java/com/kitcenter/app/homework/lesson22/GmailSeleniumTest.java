@@ -3,16 +3,12 @@ package com.kitcenter.app.homework.lesson22;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
-import com.kitcenter.app.core.selenium.WebDriverTestBase;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
+import com.kitcenter.app.selenium.core.WebDriverTestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;

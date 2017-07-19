@@ -19,7 +19,6 @@ public class Array8Tasks {
             if (i % 2 == 0 && i != 0) {
                 twentyArray[i] = i;
                 System.out.print("\n" + twentyArray[i]);
-
             }
         }
         System.out.println("\nEnd\n");
