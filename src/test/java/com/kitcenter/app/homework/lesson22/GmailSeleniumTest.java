@@ -26,7 +26,7 @@ public class GmailSeleniumTest extends WebDriverTestBase{
     @Test
     public void gmailLogonTest() {
         webDriver.get(gmailSearch);
-        // find login
+        // find logon
         By loginLocator = By.cssSelector("div[class='Xb9hP'] input[id='identifierId']");
         WebElement loginElement = webDriver.findElement(loginLocator);
         loginElement.sendKeys(logonName);

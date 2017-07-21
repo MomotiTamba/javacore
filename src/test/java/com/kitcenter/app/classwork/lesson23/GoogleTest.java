@@ -7,8 +7,6 @@ import com.kitcenter.app.selenide.pages.google.GoogleSearchPage;
 import com.kitcenter.app.selenide.pages.google.GoogleSearchResultPage;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
-import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;

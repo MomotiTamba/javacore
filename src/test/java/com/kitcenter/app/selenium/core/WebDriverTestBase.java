@@ -9,10 +9,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
-
+@Listeners({TestListener.class})
 public class WebDriverTestBase {
-    protected WebDriver webDriver;
+    public WebDriver webDriver;
 
     @BeforeClass
     public void setUp() {

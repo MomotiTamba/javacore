@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeClass;
 
 public class SelenideTestBase {
 
-    private String browser = System.getProperty("browser", "firefox");
+    private String browser = System.getProperty("browser", "chrome");
 
     @BeforeClass
     public void setUp() {
