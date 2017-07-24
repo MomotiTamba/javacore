@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson24.page;
+package com.kitcenter.app.homework.lesson24.LearningPlatform.page;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class LearningPlatformCuentaNavHomePage {
+public class CuentaNavHomePage {
 
     private SelenideElement cuentaNav = $(By.id("account-menu-nav"));
     private SelenideElement mensajesNav = $(By.id("messages"));
@@ -17,7 +17,7 @@ public class LearningPlatformCuentaNavHomePage {
     private SelenideElement salirNav = $(By.xpath(".//*[@id='account-menu']/div/ul/li[3]/a"));
     private SelenideElement loginInput = $(By.id("username"));
 
-    public LearningPlatformCuentaNavHomePage checkCuentaMensajesNav() {
+    public CuentaNavHomePage checkCuentaMensajesNav() {
         cuentaNav.click();
         mensajesNav.click();
         sinLeerNav.shouldBe(visible);
@@ -25,14 +25,14 @@ public class LearningPlatformCuentaNavHomePage {
         return this;
     }
 
-    public LearningPlatformCuentaNavHomePage checkCuentaPreferenciasNav() {
+    public CuentaNavHomePage checkCuentaPreferenciasNav() {
         cuentaNav.click();
         preferenciasNav.click();
         miPerfilNav.isSelected();
         return this;
     }
 
-    public LearningPlatformCuentaNavHomePage checkCuentaSalirNav() {
+    public CuentaNavHomePage checkCuentaSalirNav() {
         cuentaNav.click();
         salirNav.click();
         loginInput.shouldBe(visible);

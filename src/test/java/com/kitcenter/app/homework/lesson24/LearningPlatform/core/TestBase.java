@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson24.core;
+package com.kitcenter.app.homework.lesson24.LearningPlatform.core;
 
 
 import com.codeborne.selenide.Configuration;
@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 
 import static com.codeborne.selenide.Selenide.close;
 
-public class LearningPlatformTestBase {
+public class TestBase {
 
     public String browser = System.getProperty("browser", "chrome");
 

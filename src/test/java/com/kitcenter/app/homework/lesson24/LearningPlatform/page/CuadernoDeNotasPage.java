@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson24.page;
+package com.kitcenter.app.homework.lesson24.LearningPlatform.page;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class LearningPlatformCuadernoDeNotas {
+public class CuadernoDeNotasPage {
 
     private SelenideElement cuadernoDeUsernameHeading = $(By.cssSelector(".page-heading"));
     private SelenideElement verIndiceDelCursoLink = $(By.cssSelector(".grid_2 .more"));
@@ -22,7 +22,7 @@ public class LearningPlatformCuadernoDeNotas {
     private SelenideElement noteDescription = $(By.cssSelector(".noteText"));
     private String hasNoTakenNotes = "Aún no ha tomado ninguna nota";
 
-    public LearningPlatformCuadernoDeNotas checkCuadernoDeNotasContent() {
+    public CuadernoDeNotasPage checkCuadernoDeNotasContent() {
         if (cuadernoDeUsernameHeading.isDisplayed()) {
             verIndiceDelCursoLink.shouldBe(visible);
         } else {

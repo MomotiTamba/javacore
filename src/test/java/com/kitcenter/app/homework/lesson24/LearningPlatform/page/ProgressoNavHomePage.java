@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson24.page;
+package com.kitcenter.app.homework.lesson24.LearningPlatform.page;
 
 
 import com.codeborne.selenide.SelenideElement;
@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class LearningPlatformProgressoNavHomePage {
+public class ProgressoNavHomePage {
 
     private SelenideElement progressoNav = $(By.id("nav-progress"));
     private SelenideElement miProgressoNav = $(By.id("nav-profile"));
@@ -22,28 +22,28 @@ public class LearningPlatformProgressoNavHomePage {
     private String registroText = "Registro de actividades para";
     private String cuadernoDeNotasText = "Cuaderno de";
 
-    public LearningPlatformProgressoNavHomePage checkNavProgresso() {
+    public ProgressoNavHomePage checkNavProgresso() {
         progressoNav.click();
         miProgressoNav.click();
         miProgressoHeader.getText().equals(miProgressoHeaderText);
         return this;
     }
 
-    public LearningPlatformProgressoNavHomePage checkNavProgressoSugerenciasDelProfesor() {
+    public ProgressoNavHomePage checkNavProgressoSugerenciasDelProfesor() {
         progressoNav.click();
         progressoNavSugerenciasDelProfesor.click();
         sugerenciasParaDanielHeader.getText().equals(sugerenciasParaDanielText);
         return this;
     }
 
-    public LearningPlatformProgressoNavHomePage checkNavRegistro() {
+    public ProgressoNavHomePage checkNavRegistro() {
         progressoNav.click();
         progressoNavRegistro.click();
         registroHeader.getText().equals(registroText);
         return this;
     }
 
-    public LearningPlatformProgressoNavHomePage checkNavCuadernoDeNotas() {
+    public ProgressoNavHomePage checkNavCuadernoDeNotas() {
         progressoNav.click();
         progressoNavCuadernoDeNotas.click();
         cuadernoDeNotasHeader.getText().equals(cuadernoDeNotasText);

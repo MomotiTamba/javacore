@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson24.page;
+package com.kitcenter.app.homework.lesson24.LearningPlatform.page;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class LearningPlatformLogonPage {
+public class LogonPage {
 
     private SelenideElement searchAlert = $(By.cssSelector(".black-btn.migration-continue-btn"));
     private SelenideElement searchLogin = $(By.id("username"));
@@ -15,7 +15,7 @@ public class LearningPlatformLogonPage {
     private SelenideElement inicioNav = $(By.cssSelector(".main-nav .active-page"));
 
 
-    public LearningPlatformLogonPage checkLogon(String LOGIN, String PASSWORD) {
+    public LogonPage checkLogon(String LOGIN, String PASSWORD) {
         searchAlert.shouldBe(visible).click();
         searchLogin.val(LOGIN);
         searchPassword.val(PASSWORD);
@@ -24,7 +24,7 @@ public class LearningPlatformLogonPage {
         return this;
     }
 
-    public LearningPlatformLogonPage getLogon(String LOGIN, String PASSWORD) {
+    public LogonPage getLogon(String LOGIN, String PASSWORD) {
         searchAlert.click();
         searchLogin.val(LOGIN);
         searchPassword.val(PASSWORD);
@@ -32,7 +32,7 @@ public class LearningPlatformLogonPage {
         return this;
     }
 
-    public LearningPlatformLogonPage checkLogout() {
+    public LogonPage checkLogout() {
         searchLogin.isDisplayed();
         searchPassword.isDisplayed();
         return this;

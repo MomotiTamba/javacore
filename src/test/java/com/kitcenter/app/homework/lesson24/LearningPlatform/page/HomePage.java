@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson24.page;
+package com.kitcenter.app.homework.lesson24.LearningPlatform.page;
 
 
 import com.codeborne.selenide.SelenideElement;
@@ -6,18 +6,18 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class LearningPlatformHomePage {
+public class HomePage {
 
     private SelenideElement logoImg = $(By.cssSelector(".header-holder .logo>a"));
     private SelenideElement inicioNav = $(By.cssSelector(".main-nav .active-page"));
 
-    public LearningPlatformHomePage checkClickLogo() {
+    public HomePage checkClickLogo() {
         logoImg.click();
         inicioNav.isEnabled();
         return this;
     }
 
-    public LearningPlatformHomePage checkClickInicio() {
+    public HomePage checkClickInicio() {
         inicioNav.click();
         inicioNav.isEnabled();
         return this;
