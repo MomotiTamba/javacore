@@ -1,4 +1,4 @@
-package com.kitcenter.app.classwork.lesson25.advanceinteractions.selenium;
+package com.kitcenter.app.selenium.advanceinteractions;
 
 import com.kitcenter.app.selenium.core.WebDriverTestBase;
 import org.openqa.selenium.Alert;

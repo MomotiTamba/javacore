@@ -1,4 +1,4 @@
-package com.kitcenter.app.classwork.lesson25.advanceinteractions.selenide;
+package com.kitcenter.app.selenide.advanceinteractions;
 
 
 import com.codeborne.selenide.SelenideElement;

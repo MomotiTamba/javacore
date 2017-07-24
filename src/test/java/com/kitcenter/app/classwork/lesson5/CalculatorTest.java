@@ -183,7 +183,7 @@ public class CalculatorTest {
 
     @After
     public void tearDown() {
-        System.out.println("Test successfully pass");
+        System.out.println("LoginDataTest successfully pass");
     }
 
     @AfterClass

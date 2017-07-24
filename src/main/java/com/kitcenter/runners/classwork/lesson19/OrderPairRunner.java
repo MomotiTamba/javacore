@@ -15,7 +15,7 @@ public class OrderPairRunner {
         System.out.println(same);
 
         /*Map<String, Class<? extends Serializable>> expected = null;
-        Map<String, Class<java.util.Date>> result = null;*/
+        Map<String, Class<java.screenshots.Date>> result = null;*/
 
     }
 }

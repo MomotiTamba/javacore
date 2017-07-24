@@ -12,9 +12,12 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 
+import static com.kitcenter.app.selenide.util.PropertiesCache.getProperty;
+
 public class TestListener implements ITestListener {
 
     protected WebDriver driver;
+    private String sourceScreenshot = getProperty("screenshot.source");
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
@@ -22,13 +25,26 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
     }
-    @Override
+    /*@Override
     public void onTestFailure(ITestResult iTestResult) {
         driver = ((WebDriverTestBase) iTestResult.getInstance()).webDriver;
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(scrFile,
                     new File("c:\\tmp\\failed\\"
+                            + iTestResult.getMethod().getMethodName() + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }*/
+
+    @Override
+    public void onTestFailure(ITestResult iTestResult) {
+        driver = ((WebDriverTestBase) iTestResult.getInstance()).webDriver;
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(scrFile,
+                    new File(sourceScreenshot
                             + iTestResult.getMethod().getMethodName() + ".png"));
         } catch (IOException e) {
             e.printStackTrace();

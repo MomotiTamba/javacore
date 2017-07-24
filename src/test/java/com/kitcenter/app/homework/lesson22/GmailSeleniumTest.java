@@ -23,7 +23,7 @@ public class GmailSeleniumTest extends WebDriverTestBase{
     private String logonPassword = "ctcehbnb123";
     List<WebElement> elements;
 
-    @Test
+    @Test(testName = "Selenium")
     public void gmailLogonTest() {
         webDriver.get(gmailSearch);
         // find logon
@@ -55,7 +55,7 @@ public class GmailSeleniumTest extends WebDriverTestBase{
         }
     }
 
-    @Test
+    @Test(testName = "Selenide")
     public void gmailLogonTest1(){
         Configuration.browser = WebDriverRunner.CHROME;
         open(gmailSearch);
