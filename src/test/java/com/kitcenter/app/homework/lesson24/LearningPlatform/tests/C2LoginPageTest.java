@@ -20,4 +20,11 @@ public class C2LoginPageTest extends TestBase {
         LoginLogoutPage loginOk = new LoginLogoutPage();
         loginOk.getLogoutHoverResult();
     }
+
+    @Test
+    public void loginInputValueTest(){
+        open(loginData.getLearningPlatform());
+        LogonPage logonPage = new LogonPage();
+        logonPage.checkLoginInput(LoginTestData.getLOGIN());
+    }
 }
