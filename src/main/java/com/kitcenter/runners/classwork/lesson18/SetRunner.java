@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class SetRunner {
     public static void main(String[] args) {
 
-        HashSet hs = new HashSet();
+       /* HashSet hs = new HashSet();
         hs.add("C");
         hs.add("A");
         hs.add("B");
@@ -17,6 +17,6 @@ public class SetRunner {
         hs.add(0);
         hs.add("a");
         hs.add("b");
-        System.out.println(hs);
+        System.out.println(hs);*/
     }
 }

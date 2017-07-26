@@ -7,7 +7,7 @@ import static com.sun.xml.internal.bind.WhiteSpaceProcessor.replace;
 
 public class StringToDisplay {
 
-    public void setCharToString() {
+    /*public void setCharToString() {
         String stringToDisplay = "";
         char[] charArrayToString = {'a', 'b', 'c', 'd'};
 
@@ -38,7 +38,7 @@ public class StringToDisplay {
         stringToDisplay.replace(" ", "");
         stringToDisplay.trim();
         System.out.println(stringToDisplay);
-    }
+    }*/
 
 
 }
